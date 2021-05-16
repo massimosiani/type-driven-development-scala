@@ -1,11 +1,27 @@
-val dottyVersion = "3.0.0-M2"
+import Dependencies._
 
-lazy val root = project
-  .in(file("."))
-  .settings(
-    name := "dotty-simple",
-    version := "0.1.0",
+lazy val `type-driven-development-scala` =
+  project
+    .in(file("."))
+    .settings(name := "type-driven-development-scala")
+    .settings(commonSettings)
+    .settings(dependencies)
 
-    scalaVersion := dottyVersion,
+lazy val commonSettings = Seq(
+  Compile / console / scalacOptions --= Seq(
+    "-Wunused:_",
+    "-Xfatal-warnings",
+  ),
+  Test / console / scalacOptions :=
+    (Compile / console / scalacOptions).value,
+)
 
-  )
+lazy val dependencies = Seq(
+  libraryDependencies ++= Seq(
+    // main dependencies
+  ),
+  libraryDependencies ++= Seq(
+    org.scalatest.scalatest,
+    org.scalatestplus.`scalacheck-1-15`,
+  ).map(_ % Test),
+)
