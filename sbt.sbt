@@ -21,7 +21,7 @@ Test / turbo := true
 
 ThisBuild / name := "typedrivendevelopment"
 ThisBuild / organization := "io.github.massimosiani"
-ThisBuild / scalaVersion := "3.0.0"
+ThisBuild / scalaVersion := "3.0.1"
 
 ThisBuild / semanticdbEnabled := true
 ThisBuild / turbo := true
