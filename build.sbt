@@ -1,9 +1,11 @@
 import Dependencies._
 
-lazy val `type-driven-development-scala` =
+lazy val elevator = project.in(file("elevator")).settings(name := "elevator")    .settings(commonSettings)
+
+lazy val `process` =
   project
-    .in(file("."))
-    .settings(name := "type-driven-development-scala")
+    .in(file("process"))
+    .settings(name := "process")
     .settings(commonSettings)
     .settings(dependencies)
 

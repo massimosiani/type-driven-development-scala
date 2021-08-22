@@ -1,6 +1,6 @@
-package io.github.massimosiani.typedrivendevelopment
+package io.github.massimosiani.process
 
-import io.github.massimosiani.typedrivendevelopment.Process.{
+import io.github.massimosiani.process.Process.{
   >>=,
   Action,
   Loop,
@@ -31,5 +31,5 @@ object ConsoleProcessInterpreter:
       Option(res)
     case Pure(v)      => Option(v)
     case >>=(p, next) => run(p).flatMap(x => run(next(x)))
-    case _            => None
+    case null         => None
   }

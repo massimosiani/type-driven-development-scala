@@ -1,6 +1,6 @@
-package io.github.massimosiani.typedrivendevelopment
+package io.github.massimosiani.process
 
-import io.github.massimosiani.typedrivendevelopment.ProcState._
+import io.github.massimosiani.process.ProcState.*
 
 enum Process[A, InState <: ProcState, OutState <: ProcState]:
   case Request(pid: MessagePID, msg: Message) extends Process[Int, InState, InState]

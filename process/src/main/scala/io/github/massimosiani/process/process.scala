@@ -1,7 +1,7 @@
-package io.github.massimosiani.typedrivendevelopment
+package io.github.massimosiani.process
 
-import io.github.massimosiani.typedrivendevelopment.ProcState.{Complete, NoRequest, Sent}
-import io.github.massimosiani.typedrivendevelopment.Process._
+import io.github.massimosiani.process.ProcState.{Complete, NoRequest, Sent}
+import io.github.massimosiani.process.Process.*
 
 type Service[A] = Process[A, NoRequest, Complete]
 type Client[A] = Process[A, NoRequest, NoRequest]

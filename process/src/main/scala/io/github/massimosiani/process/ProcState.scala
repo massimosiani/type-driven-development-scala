@@ -1,4 +1,4 @@
-package io.github.massimosiani.typedrivendevelopment
+package io.github.massimosiani.process
 
 enum ProcState:
   case NoRequest()
