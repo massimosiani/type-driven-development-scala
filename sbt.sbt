@@ -9,6 +9,7 @@ addCommandAlias(
 )
 
 autoCompilerPlugins := true
+addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 

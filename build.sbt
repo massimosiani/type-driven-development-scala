@@ -1,6 +1,7 @@
 import Dependencies._
 
 lazy val elevator = project.in(file("elevator")).settings(name := "elevator")    .settings(commonSettings)
+    .settings(libraryDependencies ++= catsDependencies)
 
 lazy val `process` =
   project
